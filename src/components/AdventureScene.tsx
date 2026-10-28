@@ -11,18 +11,18 @@ type AdventureSceneProps = {
 function AdventureScene({ onStartAdventure }: AdventureSceneProps) {
   return (
     <section className="adventure-scene" aria-label="Petualangan Bangun Datar">
-      <div className="adventure-scene__intro">
-        <GameTitle />
-        <Tombol
-          className="adventure-scene__start"
-          icon={<Icon name="play" />}
-          onClick={onStartAdventure}
-        >
-          Mulai Petualangan
-        </Tombol>
+      <GameTitle />
+      <div className="adventure-scene__stage">
+        <ExploreSign />
+        <ExplorerCharacter />
       </div>
-      <ExplorerCharacter />
-      <ExploreSign />
+      <Tombol
+        className="adventure-scene__start"
+        icon={<Icon name="play" />}
+        onClick={onStartAdventure}
+      >
+        Mulai Petualangan
+      </Tombol>
     </section>
   )
 }

@@ -2,10 +2,12 @@ import type { ReactNode, SVGProps } from 'react'
 
 export type IconName =
   | 'book'
+  | 'chest'
   | 'chevron'
   | 'clipboard'
   | 'gem'
   | 'home'
+  | 'lock'
   | 'map'
   | 'play'
   | 'plus'
@@ -31,6 +33,14 @@ function Icon({ name, ...props }: IconProps) {
     book: (
       <g {...commonProps}>
         <path d="M12 7v14m0-14C9.7 5.2 6.5 5 3 6v14c3.5-1 6.7-.8 9 1m0-14c2.3-1.8 5.5-2 9-1v14c-3.5-1-6.7-.8-9 1" />
+      </g>
+    ),
+    chest: (
+      <g stroke="#6b3510" strokeLinejoin="round" strokeWidth="1.2">
+        <path d="M2.5 10.5h19v8.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-8.5Z" fill="#c8742b" />
+        <path d="M2.5 10.5V9a6 6 0 0 1 6-6h7a6 6 0 0 1 6 6v1.5h-19Z" fill="#2f86e8" />
+        <path d="M7 3.6V21m10-17.4V21" stroke="#f6c443" strokeWidth="2.2" />
+        <rect x="9.8" y="8.6" width="4.4" height="5.2" rx="1.2" fill="#ffd54d" />
       </g>
     ),
     chevron: (
@@ -63,6 +73,28 @@ function Icon({ name, ...props }: IconProps) {
         strokeLinejoin="round"
         strokeWidth="1.8"
       />
+    ),
+    lock: (
+      <g strokeLinecap="round" strokeLinejoin="round">
+        <path
+          className="icon-lock__shackle"
+          d="M7.5 11V8a4.5 4.5 0 0 1 9 0v3"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.6"
+        />
+        <rect
+          className="icon-lock__body"
+          x="4.5"
+          y="10"
+          width="15"
+          height="11.5"
+          rx="3"
+          fill="currentColor"
+          strokeWidth="1.6"
+        />
+        <path className="icon-lock__hole" d="M12 14.5v2.5" strokeWidth="2.2" />
+      </g>
     ),
     map: (
       <g {...commonProps}>
